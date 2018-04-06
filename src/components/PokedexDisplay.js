@@ -63,7 +63,7 @@ const PokedexDisplay = ({selectedPokemon}) => {
       <img src={require("../images/pokedex.jpg")} alt="Pokedex"/>
       <div className="pokedex-display">
         <div className="pokedex-display-container">
-          <img src={getImage()} alt="Bulbasaur" />
+          <img src={getImage()} alt="pokemon" />
           <hr/>
           <div id="id">{getId()}</div>
           <div id="name">{getName()}</div>
