@@ -1,0 +1,19 @@
+.search-bar {
+  width: 80%;
+  margin: 0 auto 20px auto;
+}
+
+.search-bar input{
+  height: 3.5em;
+  width: 50%;
+  border-radius: 3px;
+  border: 2px solid rgb(47, 226, 11);
+}
+
+.search-bar button {
+  height: 4em;
+  font-weight: bold;
+  background-color: rgb(47, 226, 11);
+  border: none;
+  width: 80px;
+}
