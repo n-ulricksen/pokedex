@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SearchBar.css';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -15,17 +16,24 @@ class SearchBar extends Component {
     this.setState({term: e.target.value});
   }
 
-  submit() {
+  submit(e) {
+    e.preventDefault();
     let searchTerm = this.state.term;
     this.props.search(searchTerm);
   }
 
   render() {
     return(
-      <div className="search-bar">
-      <input type="text" value={this.state.term} onChange={this.onChange} />
-        <button onClick={this.submit}>Click Me</button>
-      </div>
+      <form className="search-bar">
+        <input 
+          type="text" 
+          value={this.state.term} 
+          onChange={this.onChange}
+          className="" />
+        <button onClick={this.submit} className="btn btn-outline-success"
+          >Search
+        </button>
+      </form>
     );
   }
 }
