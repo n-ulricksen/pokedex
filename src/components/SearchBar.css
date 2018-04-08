@@ -1,19 +1,27 @@
 .search-bar {
-  width: 80%;
-  margin: 0 auto 20px auto;
+  width: 500px;
+  position: relative;
+  margin: 20px auto;
+  height: 65px;
 }
 
-.search-bar input{
-  height: 3.5em;
-  width: 50%;
+.search-bar input {
+  width: 75%;
+  height: 100%;
   border-radius: 3px;
   border: 2px solid rgb(47, 226, 11);
+  font-size: 20px;
+  padding-left: 15px;
+  margin-right: 2px;
 }
 
 .search-bar button {
-  height: 4em;
+  height: 71px;
+  margin-top: -5px;
   font-weight: bold;
   background-color: rgb(47, 226, 11);
   border: none;
-  width: 80px;
+  padding-top: 3px;
+  width: 18%;
+  font-size: 16px;
 }

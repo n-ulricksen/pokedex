@@ -14,7 +14,7 @@ const PokedexDisplay = ({selectedPokemon}) => {
       } else if (id < 100) {
         newId = "#0" + id;
       } else {
-        newId="#" + id;
+        newId= "#" + id;
       }
       return newId;
     }
@@ -33,7 +33,8 @@ const PokedexDisplay = ({selectedPokemon}) => {
   const getType = () => {
     let type = '';
     if (types) {
-      type = types[0].type.name;
+      let numOfTypes = types.length;
+      type = types[numOfTypes-1].type.name;
       return type.charAt(0).toUpperCase() + type.slice(1);
     }
     return null;
@@ -41,10 +42,26 @@ const PokedexDisplay = ({selectedPokemon}) => {
 
   const getHeight = () => {
     let newHeight = '';
+    let heightInFeet = 0;
+    let feet = 0;
+    let inches = 0;
+    if (height) {
+      heightInFeet = height / 3.04799990246;  // decimeters to feet
+      feet = Math.floor(heightInFeet);
+      inches = Math.round((heightInFeet % 1) * 12);
+      newHeight = feet + "'" + inches + '"';
+      return newHeight;
+    }
+    return null;
   }
 
   const getWeight = () => {
     let newWeight = '';
+    if (height) {
+      newWeight = Math.round(weight * 0.220462) + " lbs.";
+      return newWeight;
+    }
+    return null;
   }
 
   const getImage = () => {
@@ -54,9 +71,7 @@ const PokedexDisplay = ({selectedPokemon}) => {
       return image;
     }
     return null;
-  }
-   // TODO: convert to function for each data being displayed
-  
+  }  
 
   return (
     <div className="pokedex-container">
@@ -70,11 +85,11 @@ const PokedexDisplay = ({selectedPokemon}) => {
           <div id="type">{getType()}</div>
           <div id="height">
             <div id="height-label">Height</div>
-            <div id="height-value">{height}</div>
+            <div id="height-value">{getHeight()}</div>
           </div>
           <div id="weight">
             <div id="weight-label">Weight</div>
-            <div id="weight-value">{weight}</div>
+            <div id="weight-value">{getWeight()}</div>
           </div>
         </div>
       </div>

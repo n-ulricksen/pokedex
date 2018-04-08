@@ -18,7 +18,7 @@ class SearchBar extends Component {
 
   submit(e) {
     e.preventDefault();
-    let searchTerm = this.state.term;
+    let searchTerm = this.state.term.toLowerCase();
     this.props.search(searchTerm);
   }
 
@@ -30,7 +30,7 @@ class SearchBar extends Component {
           value={this.state.term} 
           onChange={this.onChange}
           className="" />
-        <button onClick={this.submit} className="btn btn-outline-success"
+        <button onClick={this.submit} className=""
           >Search
         </button>
       </form>

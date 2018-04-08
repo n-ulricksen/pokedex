@@ -15,7 +15,7 @@ class App extends Component {
     });
     this.getPokemon = this.getPokemon.bind(this);
 
-    this.getPokemon(1);
+    this.getPokemon(1);   // load bulbasaur as initial selected pokemon
   }
 
   getPokemon(pokemon) {
@@ -27,7 +27,10 @@ class App extends Component {
           this.setState({selectedPokemon: res});
           // console.log(res);
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+          console.log(err);
+          alert("Pokemon '" + pokemon + "' not found! \nCheck your spelling and try again.");
+        });
       }
   }
 
