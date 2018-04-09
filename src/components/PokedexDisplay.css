@@ -45,6 +45,7 @@ hr {
   font-size: 0.9em;
   margin-top: 10px;
   margin-left: 10px;
+  width: 66px;
 }
 
 #name {
@@ -53,7 +54,7 @@ hr {
   margin-right: 5px;
   margin-top: 5px;
   padding: 0;
-  width: 75%;
+  width: 73%;
 }
 
 #type {

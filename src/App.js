@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Pokedex } from 'pokeapi-js-wrapper';
+import { Pokedex } from '../node_modules/pokeapi-js-wrapper/dist/index.js';
 import PokedexDisplay from './components/PokedexDisplay';
 import PokemonList from './components/PokemonList';
 import SearchBar from './components/SearchBar';

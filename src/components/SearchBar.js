@@ -18,8 +18,7 @@ class SearchBar extends Component {
 
   submit(e) {
     e.preventDefault();
-    let searchTerm = this.state.term.toLowerCase();
-    this.props.search(searchTerm);
+    this.props.search(this.state.term);
   }
 
   render() {
