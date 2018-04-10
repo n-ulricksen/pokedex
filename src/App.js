@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Pokedex } from '../node_modules/pokeapi-js-wrapper/dist/index.js';
 import PokedexDisplay from './components/PokedexDisplay';
-import PokemonList from './components/PokemonList';
+import SearchList from './components/SearchList';
 import SearchBar from './components/SearchBar';
 import './App.css';
+
+const P = new Pokedex({protocol: 'https'});
 
 class App extends Component {
   constructor(props) {
@@ -19,13 +21,10 @@ class App extends Component {
   }
 
   getPokemon(pokemon) {
-    const P = new Pokedex({protocol: 'https'});
-
     if (pokemon) {
       P.getPokemonByName(pokemon)
         .then(res => {
           this.setState({selectedPokemon: res});
-          // console.log(res);
         })
         .catch(err => {
           console.log(err);

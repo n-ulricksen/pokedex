@@ -2,7 +2,7 @@ import React from 'react';
 import './PokedexDisplay.css'
 
 const PokedexDisplay = ({selectedPokemon}) => {
-  console.log(selectedPokemon);
+  // console.log(selectedPokemon);
 
   const { id, name, types, height, weight, sprites } = selectedPokemon;
 
