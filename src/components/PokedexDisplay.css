@@ -17,6 +17,7 @@ body {
 
 .pokedex-display {
   position: absolute;
+  margin-left: -3px;
 }
 
 .pokedex-display-container {
@@ -26,7 +27,8 @@ body {
   width: 320px;
   height: 305px;
   position: relative;
-  margin-right: 410px;
+  margin-right: 115px;
+  float: left;
   margin-top: 154px;
 }
 

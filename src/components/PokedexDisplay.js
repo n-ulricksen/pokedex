@@ -1,5 +1,6 @@
 import React from 'react';
-import './PokedexDisplay.css'
+import SearchList from './SearchList';
+import './PokedexDisplay.css';
 
 const PokedexDisplay = ({selectedPokemon}) => {
   // console.log(selectedPokemon);
@@ -92,6 +93,7 @@ const PokedexDisplay = ({selectedPokemon}) => {
             <div id="weight-value">{getWeight()}</div>
           </div>
         </div>
+        <SearchList selectedPokemon={selectedPokemon} />
       </div>
     </div>
   );

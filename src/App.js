@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Pokedex } from '../node_modules/pokeapi-js-wrapper/dist/index.js';
 import PokedexDisplay from './components/PokedexDisplay';
-import SearchList from './components/SearchList';
 import SearchBar from './components/SearchBar';
 import './App.css';
 
