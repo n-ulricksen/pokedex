@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+}
+
+.search-list {
+  text-align: center;
+  width: 290px;
+  height: 365px;
+  position: relative;
+  float: right;
+  margin-top: 160px;
+  
+}
+
+.search-list-display {
+  height: 100%;
+  padding: 0;
+}
+
+.search-list-display li {
+  height: 33%;
+  list-style: none;
+  border: 1px solid black;
+  margin: 1px 0;
+}
