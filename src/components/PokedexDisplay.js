@@ -49,8 +49,13 @@ const PokedexDisplay = ({selectedPokemon}) => {
       heightInFeet = height / 3.04799990246;  // decimeters to feet
       feet = Math.floor(heightInFeet);
       inches = Math.round((heightInFeet % 1) * 12);
-      newHeight = feet + "'" + inches + '"';
-      return newHeight;
+      if (inches < 12) {  // check inches == 12 (convert to a foot)
+        newHeight = feet + "'" + inches + '"';
+        return newHeight;
+      } else {
+        newHeight = (feet + 1) + "'" + '0' + '"';
+        return newHeight;
+      }
     }
     return null;
   }

@@ -12,9 +12,9 @@ class App extends Component {
     super(props);
 
     this.state = ({
-      pokemon: [],
       selectedPokemon: {}
     });
+    
     this.getPokemon = this.getPokemon.bind(this);
 
     this.getPokemon(1);   // load bulbasaur as initial selected pokemon

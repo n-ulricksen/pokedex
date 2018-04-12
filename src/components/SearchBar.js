@@ -8,15 +8,15 @@ class SearchBar extends Component {
     this.state = ({
       term: ''
     });
-    this.onChange = this.onChange.bind(this);
-    this.submit = this.submit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  onChange(e) {
+  handleChange(e) {
     this.setState({term: e.target.value});
   }
 
-  submit(e) {
+  handleSubmit(e) {
     e.preventDefault();
     let searchTerm = this.state.term.toLowerCase();
     this.props.search(searchTerm);
@@ -28,10 +28,9 @@ class SearchBar extends Component {
         <input 
           type="text" 
           value={this.state.term} 
-          onChange={this.onChange}
-          className="" />
-        <button onClick={this.submit} className=""
-          >Search
+          onChange={this.handleChange} />
+        <button onClick={this.handleSubmit}>
+          Search
         </button>
       </form>
     );
