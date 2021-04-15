@@ -19,7 +19,7 @@ git clone https://github.com/n-ulricksen/pokedex.git
 cd pokedex
 ```
 
-Install client & server dependencies:
+Install dependencies:
 
 ```sh
 npm install
